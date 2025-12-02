@@ -7,7 +7,7 @@ data class Chat(
 )
 
 data class Message(
-    val isUserA: Boolean,   // ← 这个字段最重要！
+    val isUserA: Boolean, //判断是哪个用户
     val text: String,
     val time: String
 )

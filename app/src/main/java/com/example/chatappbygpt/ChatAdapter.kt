@@ -15,6 +15,7 @@ class ChatAdapter(private val msgList: List<Message>) :
             R.layout.item_message_right
         else
             R.layout.item_message_left
+        // 实现左右布局，通过RecyclerView传递参数
 
         val view = LayoutInflater.from(parent.context).inflate(layout, parent, false)
         return MsgViewHolder(view)
@@ -23,6 +24,7 @@ class ChatAdapter(private val msgList: List<Message>) :
 
     override fun getItemViewType(position: Int): Int {
         return if (msgList[position].isUserA) 1 else 0
+        // 判断左右布局
     }
 
     override fun onBindViewHolder(holder: MsgViewHolder, position: Int) {

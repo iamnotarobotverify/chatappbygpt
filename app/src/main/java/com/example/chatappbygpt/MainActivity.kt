@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         loadAndShowList()
+        // 返回主界面 重新导入消息
     }
 
     private fun loadAndShowList() {
